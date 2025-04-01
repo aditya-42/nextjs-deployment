@@ -193,14 +193,14 @@ const ApplicantDetails = () => {
                     <LinkButton href={applicant.linkedProfile} icon={<FaLinkedin />} text="LinkedIn" />
                     <LinkButton href={applicant.portfolioURL} icon={<FaGlobe />} text="Portfolio" />
                     <LinkButton
-                        href={`http://localhost:5001/${applicant.uploadResume}`}
+                        href={`${process.env.NEXT_PUBLIC_API_URL}/${applicant.uploadResume}`}
                         icon={<FaFileAlt />}
                         text="Resume"
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => {
                             e.preventDefault();
-                            window.open(`http://localhost:5001/${applicant.uploadResume}`, '_blank', 'noopener,noreferrer');
+                            window.open(`${process.env.NEXT_PUBLIC_API_URL}/${applicant.uploadResume}`, '_blank', 'noopener,noreferrer');
                         }}
                     />
 

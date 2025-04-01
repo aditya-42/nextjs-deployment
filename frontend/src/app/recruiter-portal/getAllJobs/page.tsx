@@ -84,7 +84,7 @@ const GetAllJobs = ({ jobId }) => {
     useEffect(() => {
         if (section === "jobs") {
             axios
-                .get<Job[]>("http://localhost:5001/api/recruiter/getAlljobs")
+                .get<Job[]>(`${process.env.NEXT_PUBLIC_API_URL}/api/recruiter/getAlljobs`)
                 .then((response) => {
                     console.log("Repsponse", response)
                     setTotalResults(response.data.length)
@@ -214,7 +214,7 @@ const handleUpdateJob = async (jobData) => {
             console.log("currentJob data before update:", jobData);
 
             const response = await axios.put(
-                `http://localhost:5001/api/recruiter/update-job-post/${jobData._id}`,
+                `${process.env.NEXT_PUBLIC_API_URL}/api/recruiter/update-job-post/${jobData._id}`,
                 jobData
             );
             setJobs((prevJobs) =>

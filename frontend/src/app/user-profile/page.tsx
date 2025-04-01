@@ -296,7 +296,7 @@ export default function UserProfilePage() {
                             <div className="mb-4">
                                 <p>Current Resume:</p>
                                 <a
-                                    href={`http://localhost:5001${mergedUser.uploadResume}`}
+                                    href={`${process.env.NEXT_PUBLIC_API_URL}/${mergedUser.uploadResume}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-blue-500 hover:underline block"
