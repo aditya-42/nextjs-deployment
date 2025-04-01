@@ -16,7 +16,7 @@ const RecruiterDashboard = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [newEvent, setNewEvent] = useState({ title: '', start: '', end: '' });
   
-    const openModal = () => setIsModalOpen(true);
+    //const openModal = () => setIsModalOpen(true);
     const closeModal = () => setIsModalOpen(false);
   
     const handleInputChange = (e) => {

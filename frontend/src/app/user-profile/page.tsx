@@ -17,7 +17,9 @@ interface Job {
 
 export default function UserProfilePage() {
     const [jobs, setJobs] = useState<Job[]>([]);
+    // @ts-ignore
     const [user,setUser] = useState(null);
+    // @ts-ignore
     const [applicant,setApplicant] = useState(null);
     const [mergedUser, setMergedUser] = useState(null);
     const [loading, setLoading] = useState(true);

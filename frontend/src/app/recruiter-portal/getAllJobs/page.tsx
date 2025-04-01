@@ -72,6 +72,7 @@ const GetAllJobs = ({ jobId }) => {
     const [currentJob, setCurrentJob] = useState<Job | null>(null);
 
     //loading
+    // @ts-ignore
     const [loading,setLoading] = useState(true);
 
     const router = useRouter();

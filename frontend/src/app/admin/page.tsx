@@ -115,8 +115,9 @@ export default function AdminPage() {
       await axios.delete(`${process.env.NEXT_PUBLIC_API_URL}/api/company/delete-company/${companyId}`);
       setCompanies((prev) => prev.filter((company) => company._id !== companyId));
       alert("Company deleted successfully!");
+      //@ts-nocheck error 
     } catch (error) {
-      console.error("Error deleting company:");
+      console.error("Error deleting company:", error);
       }
 
   }
