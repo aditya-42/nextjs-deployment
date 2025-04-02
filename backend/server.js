@@ -35,7 +35,7 @@ app.use(cookieParser());
 // middleware
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://nextjs-deployment-five.vercel.app"],
+    origin: ["http://localhost:3000", "https://apply-at-hire-ease.vercel.app/"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Authorization", "Content-Type"],
     credentials: true,
